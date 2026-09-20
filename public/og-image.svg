@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="Momentum. We run the ads. You run the club.">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0.47" stop-color="#080e14"/>
+      <stop offset="1" stop-color="#0c1b2a"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <g transform="translate(80 74)">
+    <path d="M3 26V7h5l8 11L24 7h5v19h-5V15l-8 11-8-11v11H3Z" fill="#d8b777" transform="scale(1.05)"/>
+    <text x="48" y="26" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="30" font-weight="700" letter-spacing="-1.4" fill="#f4f3ee">momentum<tspan fill="#d8b777">.</tspan></text>
+  </g>
+  <g transform="translate(80 206)">
+    <rect x="0" y="-6" width="28" height="2" fill="#d8b777"/>
+    <text x="44" y="0" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="19" font-weight="600" letter-spacing="2.8" fill="#d8b777">PAID ADS FOR NICHE FITNESS CLUBS</text>
+  </g>
+  <text x="80" y="330" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="82" font-weight="800" letter-spacing="-4.4" fill="#f4f3ee">WE RUN THE ADS.</text>
+  <text x="80" y="420" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="82" font-weight="800" letter-spacing="-4.4" fill="#d8b777">YOU RUN THE CLUB.</text>
+  <text x="80" y="492" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="25" fill="#aeb8c2">Meta and Google campaigns for boutique gyms, Pilates studios,</text>
+  <text x="80" y="528" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="25" fill="#aeb8c2">and specialist fitness clubs.</text>
+  <rect x="80" y="576" width="1040" height="1" fill="#ffffff20"/>
+</svg>

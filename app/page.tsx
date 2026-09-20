@@ -5,6 +5,7 @@ import { ArrowUpRight, BarChart3, Check, CheckCircle2, Crosshair, Layers3, Loade
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { leadSchema, spendOptions, type LeadInput } from "@/lib/leads";
+import { faqs } from "@/lib/site";
 
 const steps = [
   { title: "Audit", number: "01", icon: Crosshair, subtitle: "Find your strongest starting point.", bullets: ["Understand your ideal member", "Review your offer and website", "Check your existing campaigns", "Define a budget and clear goals"] },
@@ -15,13 +16,6 @@ const industries = [
   { title: "Boutique gyms", type: "STRENGTH", image: "/images/boutique-gym.webp", imageAlt: "AI-generated boutique strength gym with warm lighting and neatly arranged training equipment", bullets: ["Promote trials and club visits", "Reach people in your local area", "Track inquiries through to sign-ups"] },
   { title: "Pilates & yoga studios", type: "MOVEMENT", image: "/images/pilates-studio.webp", imageAlt: "AI-generated Pilates studio with wood-framed reformers and warm natural light", bullets: ["Bring attention to intro offers", "Promote classes with open spaces", "Reconnect with interested visitors"] },
   { title: "Boxing & martial arts", type: "DISCIPLINE", image: "/images/boxing-club.webp", imageAlt: "AI-generated boxer training with a heavy bag inside a boutique boxing club", bullets: ["Promote beginner-friendly programs", "Reach local adults and families", "Turn interest into trial bookings"] },
-];
-const faqs = [
-  { q: "Is Momentum a good fit for my club?", a: "We focus on independent gyms, boutique studios, and specialist fitness clubs. The strategy call helps us understand your offer, capacity, and goals, then decide together whether paid ads make sense for your business." },
-  { q: "What budget do I need, and what does it cost?", a: "Your ad budget depends on your location, offer, and growth goals. On the call, we’ll discuss a realistic starting budget and the scope of our work. Ad spend is paid directly to Meta or Google; our management fee is separate. You’ll receive a clear proposal before committing." },
-  { q: "How soon can I expect results?", a: "Early campaigns help us learn which messages and offers generate interest. Reliable decisions take testing, conversion tracking, and feedback from your team. Timing varies by market and budget, so we don’t promise a fixed number of leads or a guaranteed return." },
-  { q: "Do you have case studies or use AI to run the ads?", a: "Momentum is a new agency, so we don’t have client case studies to share yet. We’ll walk you through our approach, campaign structure, and reporting before you decide. AI supports research and creative ideas; a person reviews the strategy, ads, and budget decisions." },
-  { q: "What happens after I request a strategy call?", a: "We’ll review your details and follow up by email to arrange a time. The call covers your club, your current marketing, and possible next steps. There’s no obligation to sign up. If we move forward, you’ll review the scope, fees, and terms first, and keep ownership of your ad accounts." },
 ];
 function Mark() {
   return <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M3 26V7h5l8 11L24 7h5v19h-5V15l-8 11-8-11v11H3Z" fill="currentColor" /></svg>;

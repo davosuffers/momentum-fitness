@@ -5,7 +5,7 @@ import { readExecutionProfile } from "./scripts/execution-profile.mjs";
 import { sites } from "./build/sites-vite-plugin";
 
 const SITE_CREATOR_PLACEHOLDER_DATABASE_ID =
-  "00000000-0000-4000-8000-000000000000";
+  "5c6c7625-3399-470c-a5e5-45f9ce9038aa";
 
 const { d1, r2 } = hostingConfig;
 
@@ -14,13 +14,14 @@ const isCodexSeatbeltSandbox = process.env.CODEX_SANDBOX === "seatbelt";
 const managedLinux = readExecutionProfile() === "managed-linux";
 
 const localBindingConfig = {
+  name: "momentum-fitness",
   main: "vinext/server/fetch-handler",
   compatibility_flags: ["nodejs_compat"],
   d1_databases: d1
     ? [
         {
           binding: d1,
-          database_name: "site-creator-d1",
+          database_name: "momentum-fitness-db",
           database_id: SITE_CREATOR_PLACEHOLDER_DATABASE_ID,
         },
       ]
@@ -33,6 +34,10 @@ const localBindingConfig = {
         },
       ]
     : [],
+  routes: [
+    { pattern: "momentumpace.com/*", zone_name: "momentumpace.com" },
+    { pattern: "www.momentumpace.com/*", zone_name: "momentumpace.com" },
+  ],
 };
 
 export default defineConfig(async () => {

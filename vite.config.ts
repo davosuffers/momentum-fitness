@@ -34,10 +34,8 @@ const localBindingConfig = {
         },
       ]
     : [],
-  routes: [
-    { pattern: "momentumpace.com/*", zone_name: "momentumpace.com" },
-    { pattern: "www.momentumpace.com/*", zone_name: "momentumpace.com" },
-  ],
+  // www is handled by a Cloudflare Page Rule that 301s to the apex domain.
+  routes: [{ pattern: "momentumpace.com/*", zone_name: "momentumpace.com" }],
 };
 
 export default defineConfig(async () => {

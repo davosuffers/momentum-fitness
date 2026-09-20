@@ -26,7 +26,7 @@ writeFileSync(localConfigPath, JSON.stringify(config, null, 2) + "\n");
 
 const args = action === "migrate"
   ? ["d1", "migrations", "apply", "DB"]
-  : ["d1", "execute", "DB", "--command", 'SELECT business_name, email, business_url, monthly_ad_spend, status, created_at FROM "Leads" ORDER BY created_at DESC;'];
+  : ["d1", "execute", "DB", "--command", 'SELECT business_name, email, phone, business_url, monthly_ad_spend, status, created_at FROM "Leads" ORDER BY created_at DESC;'];
 // Every command is explicitly local. Hosted leads and Cloudflare credentials
 // are never read or changed by this helper.
 args.push("--local", "--config", localConfigPath, "--persist-to", path.join(projectRoot, ".wrangler/state"));

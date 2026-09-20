@@ -1,0 +1,1 @@
+ALTER TABLE `Leads` ADD `phone` text;

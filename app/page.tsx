@@ -69,7 +69,7 @@ export default function Home() {
       void Promise.resolve(context.registerTool({
         name: "request_strategy_call", title: "Request a Momentum strategy call",
         description: "Save a fitness business’s request for a strategy call. This sends contact details to Momentum for email follow-up; it does not schedule a time. Submit only when the visitor has asked to send these details.",
-        inputSchema: { type: "object", properties: { businessName: { type: "string", maxLength: 120 }, email: { type: "string", format: "email", maxLength: 254 }, businessUrl: { type: "string", maxLength: 500 }, monthlyAdSpend: { type: "string", enum: [...spendOptions] } }, required: ["businessName", "email", "businessUrl", "monthlyAdSpend"], additionalProperties: false },
+        inputSchema: { type: "object", properties: { businessName: { type: "string", maxLength: 120 }, email: { type: "string", format: "email", maxLength: 254 }, phone: { type: "string", maxLength: 30 }, businessUrl: { type: "string", maxLength: 500 }, monthlyAdSpend: { type: "string", enum: [...spendOptions] } }, required: ["businessName", "email", "businessUrl", "monthlyAdSpend"], additionalProperties: false },
         annotations: { readOnlyHint: false, untrustedContentHint: false },
         async execute(input) {
           const result = await submitLead(input);
@@ -84,7 +84,7 @@ export default function Home() {
   async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
     const form = new FormData(event.currentTarget);
-    const input: LeadInput = { businessName: String(form.get("businessName") || ""), email: String(form.get("email") || ""), businessUrl: String(form.get("businessUrl") || ""), monthlyAdSpend: spend as LeadInput["monthlyAdSpend"], website: String(form.get("website") || "") };
+    const input: LeadInput = { businessName: String(form.get("businessName") || ""), email: String(form.get("email") || ""), phone: String(form.get("phone") || ""), businessUrl: String(form.get("businessUrl") || ""), monthlyAdSpend: spend as LeadInput["monthlyAdSpend"], website: String(form.get("website") || "") };
     try { await submitLead(input); } catch { /* Keep inputs and show the error. */ }
   }
 
@@ -115,6 +115,7 @@ export default function Home() {
             <p className="form-intro">Share your details and we’ll email you to arrange a time. No obligation.</p>
             <div className="form-field"><label htmlFor="businessName">Business name</label><input id="businessName" name="businessName" placeholder="Your club or studio" autoComplete="organization" required minLength={2} maxLength={120} disabled={status === "saving"} /></div>
             <div className="form-field"><label htmlFor="email">Email address</label><input id="email" name="email" type="email" placeholder="you@yourclub.com" autoComplete="email" required maxLength={254} disabled={status === "saving"} /></div>
+            <div className="form-field"><label htmlFor="phone">Phone number <span className="label-optional">optional</span></label><input id="phone" name="phone" type="tel" inputMode="tel" placeholder="+1 555 123 4567" autoComplete="tel" maxLength={30} disabled={status === "saving"} /></div>
             <div className="form-field"><label htmlFor="businessUrl">Business URL</label><input id="businessUrl" name="businessUrl" type="text" inputMode="url" placeholder="yourclub.com" autoComplete="url" required maxLength={500} disabled={status === "saving"} /></div>
             <div className="form-field"><label htmlFor="monthlyAdSpend">Monthly ad spend</label><Select name="monthlyAdSpend" value={spend} onValueChange={setSpend} required disabled={status === "saving"}><SelectTrigger id="monthlyAdSpend" className="spend-select"><SelectValue placeholder="Select your budget" /></SelectTrigger><SelectContent position="popper">{spendOptions.map(option => <SelectItem className="spend-option" key={option} value={option}>{option}</SelectItem>)}</SelectContent></Select></div>
             <div className="honeypot" aria-hidden="true"><label htmlFor="website">Leave this field empty</label><input id="website" name="website" tabIndex={-1} autoComplete="off" /></div>

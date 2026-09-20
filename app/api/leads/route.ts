@@ -17,9 +17,9 @@ export async function POST(request: Request) {
   const parsed = leadRequestSchema.safeParse(body);
   if (!parsed.success) return Response.json({ error: parsed.error.issues[0]?.message || "Please check your details." }, { status: 400, headers });
   if (parsed.data.website) return Response.json({ error: "We couldn’t verify this submission. Please reload the page and try again." }, { status: 400, headers });
-  const { requestId, businessName, email, businessUrl, monthlyAdSpend } = parsed.data;
+  const { requestId, businessName, email, phone, businessUrl, monthlyAdSpend } = parsed.data;
   try {
-    await getRawDb().prepare('INSERT INTO "Leads" (id, business_name, email, business_url, monthly_ad_spend, status, created_at) VALUES (?, ?, ?, ?, ?, ?, ?) ON CONFLICT(id) DO NOTHING').bind(requestId, businessName, email, businessUrl, monthlyAdSpend, "new", new Date().toISOString()).run();
+    await getRawDb().prepare('INSERT INTO "Leads" (id, business_name, email, phone, business_url, monthly_ad_spend, status, created_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?) ON CONFLICT(id) DO NOTHING').bind(requestId, businessName, email, phone || null, businessUrl, monthlyAdSpend, "new", new Date().toISOString()).run();
     return Response.json({ ok: true }, { status: 201, headers });
   } catch (error) {
     console.error("Lead submission failed", error instanceof Error ? error.name : "StorageError");

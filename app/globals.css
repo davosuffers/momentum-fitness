@@ -119,6 +119,7 @@ button { cursor: pointer; }
 .form-intro { font-size: 14px; line-height: 1.65; color: #a5b2c0; margin: 0 0 26px; }
 .form-field { display: grid; gap: 10px; margin-bottom: 22px; }
 .form-field label { font-size: 14px; color: #dce1e6; }
+.label-optional { margin-left: 6px; font-size: 12px; letter-spacing: .04em; text-transform: uppercase; color: #8494a4; }
 .form-field input { width: 100%; height: 51px; padding: 0 15px; border: 1px solid #ffffff26; border-radius: 3px; background: #0d1d2c; color: var(--foreground); font-size: 16px; transition: border-color .2s; }
 .form-field input::placeholder { color: #8091a2; opacity: 1; }
 .form-field input:focus { border-color: var(--gold); outline: 1px solid var(--gold); outline-offset: 0; }

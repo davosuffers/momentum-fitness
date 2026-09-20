@@ -1,0 +1,44 @@
+{
+  "description": "Original AI-generated illustrative imagery. These scenes do not depict Momentum clients or client results.",
+  "assets": [
+    {
+      "name": "boutique-gym",
+      "path": "public/images/boutique-gym.webp",
+      "width": 1200,
+      "height": 800,
+      "bytes": 143518,
+      "generation": {
+        "mode": "built-in image_gen",
+        "originalWidth": 1536,
+        "originalHeight": 1024,
+        "prompt": "Use case: photorealistic-natural\nAsset type: illustrative editorial website photograph for a premium independent fitness ads website, Momentum\nPrimary request: a refined boutique strength gym interior, tidy dark dumbbell racks and realistic strength equipment, premium independent fitness space with architectural quality prominent.\nScene/backdrop: dark charcoal and navy gym interior with clean realistic equipment placement and warm natural side lighting.\nSubject: the gym interior and equipment; at most one adult wearing plain dark athletic clothes, softly out of focus near the center.\nStyle/medium: original photorealistic editorial fitness photography, believable real-world space and materials, realistic neutral skin tones.\nComposition/framing: landscape 1536x1024. Important equipment and any person centered, composed to survive a 2:1 website card crop and narrower tablet crop.\nLighting/mood: warm gold natural side lighting, calm and refined, restrained contrast.\nConstraints: illustrative industry photo, not a real client. No text, logos, watermarks, UI, fake smoke, or haze. No implausible or duplicated equipment."
+      }
+    },
+    {
+      "name": "pilates-studio",
+      "path": "public/images/pilates-studio.webp",
+      "width": 1200,
+      "height": 800,
+      "bytes": 97824,
+      "generation": {
+        "mode": "built-in image_gen",
+        "originalWidth": 1536,
+        "originalHeight": 1024,
+        "prompt": "Use case: photorealistic-natural\nAsset type: illustrative editorial website photograph for a premium independent fitness ads website, Momentum\nPrimary request: an inviting premium Pilates studio with realistic wood-and-black reformers aligned neatly.\nScene/backdrop: premium independent Pilates space, dark charcoal and navy neutral architecture, refined natural materials, warm natural side lighting.\nSubject: neatly aligned believable Pilates reformers; at most one adult in neutral athletic clothes standing beside the central reformer in a simple believable pose.\nStyle/medium: original photorealistic editorial fitness photography, realistic neutral skin tones and natural surface textures.\nComposition/framing: landscape 1536x1024. Central reformer and any person near the center, composed to survive a 2:1 website card crop and narrower tablet crop.\nLighting/mood: inviting, quiet, warm gold natural side light.\nConstraints: illustrative industry photo, not a real client. No text, logos, watermarks, UI, fake smoke, or haze. Correct believable reformer construction and natural human anatomy."
+      }
+    },
+    {
+      "name": "boxing-club",
+      "path": "public/images/boxing-club.webp",
+      "width": 1200,
+      "height": 800,
+      "bytes": 71424,
+      "generation": {
+        "mode": "built-in image_gen",
+        "originalWidth": 1536,
+        "originalHeight": 1024,
+        "prompt": "Use case: photorealistic-natural\nAsset type: illustrative editorial website photograph for a premium independent fitness ads website, Momentum\nPrimary request: waist-up side profile of an adult boxer in plain dark athletic clothes and dark boxing gloves quietly practicing against a dark heavy bag.\nScene/backdrop: premium independent boxing club with a dark charcoal and navy background, authentic understated equipment.\nSubject: one adult boxer in profile and one dark heavy bag, both close to the center of the image. The boxer is focused during quiet controlled solo practice.\nStyle/medium: original photorealistic editorial fitness photography, natural human anatomy, realistic neutral skin tones, authentic glove and bag materials.\nComposition/framing: landscape 1536x1024. Waist-up side profile, boxer and bag both centered as a group, composed to survive a 2:1 website card crop and narrower tablet crop.\nLighting/mood: warm gold rim and side light, calm focus, restrained contrast.\nConstraints: illustrative industry photo, not a real client. No fights, injuries, text, logos, watermarks, UI, fake smoke, or haze. Natural arms, hands inside gloves, face, and proportions."
+      }
+    }
+  ]
+}
